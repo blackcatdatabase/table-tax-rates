@@ -57,7 +57,7 @@ erDiagram
     DATE valid_from
     DATE valid_to
   }
-  TAX_RATES }o--|| COUNTRIES : (country_iso2)
+  TAX_RATES }o--|| COUNTRIES : "country_iso2"
 ```
 
 ## Indexes
