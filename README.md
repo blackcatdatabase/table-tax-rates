@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL%208.0%2B-4479A1?logo=mysql&logoColor=white) ![License](https://img.shields.io/badge/license-BlackCat%20Proprietary-red) ![Status](https://img.shields.io/badge/status-stable-informational) ![Generated](https://img.shields.io/badge/generated-from%20schema--map-blue)
 
-> Schema package for table **tax_rates** (repo: $slug).
+> Schema package for table **tax_rates** (repo: `tax-rates`).
 
 ## Files
 ```
@@ -39,7 +39,7 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 |-------:|:-----|:----:|:--------|:------|
 | id | BIGINT UNSIGNED | — | — | AUTO_INCREMENT, PK |
 | country_iso2 | CHAR(2) | NO | — |  |
-| category | ENUM(''ebook'',''physical'') | NO | — |  |
+| category | ENUM('ebook','physical') | NO | — |  |
 | rate | DECIMAL(5,2) | NO | — |  |
 | valid_from | DATE | NO | — |  |
 | valid_to | DATE | YES | — |  |
@@ -50,12 +50,12 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 ```mermaid
 erDiagram
   TAX_RATES {
-    BIGINT id PK
-    CHAR(2) country_iso2
-    ENUM(''ebook'',''physical'') category
-    DECIMAL(5,2) rate
-    DATE valid_from
-    DATE valid_to
+    INT id PK
+    VARCHAR country_iso2
+    ENUM category
+    DECIMAL rate
+    DATETIME valid_from
+    DATETIME valid_to
   }
   TAX_RATES }o--|| COUNTRIES : "country_iso2"
 ```
