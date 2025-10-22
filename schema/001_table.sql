@@ -3,7 +3,7 @@
 CREATE TABLE IF NOT EXISTS tax_rates (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   country_iso2 CHAR(2) NOT NULL,
-  category ENUM(''ebook'',''physical'') NOT NULL,
+  category ENUM('ebook','physical') NOT NULL,
   rate DECIMAL(5,2) NOT NULL,
   valid_from DATE NOT NULL,
   valid_to DATE NULL
