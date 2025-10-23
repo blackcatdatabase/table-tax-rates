@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\TaxRates\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\TaxRates\Dto\TaxRateDto;
 use BlackCat\Database\Packages\TaxRates\Mapper\TaxRateDtoMapper;
 use BlackCat\Database\Packages\TaxRates\Repository\TaxRateRepository;
