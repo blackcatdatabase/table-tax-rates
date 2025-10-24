@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\TaxRates;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'tax_rates'; }
-    public static function contractView(): string { return 'v_tax_rates_contract'; }
+    public static function contractView(): string { return 'vw_tax_rates'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'country_iso2', 'category', 'rate', 'valid_from', 'valid_to' ]; }
     public static function pk(): string { return 'id'; }

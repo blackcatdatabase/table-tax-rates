@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\TaxRates;
 /**
  * Bezpečný builder WHERE/ORDER/LIMIT.
  * - whitelist filtrů: [ 'id', 'country_iso2', 'category', 'rate', 'valid_from', 'valid_to' ]
- * - whitelist pro LIKE hledání: [ 'country_iso2' ]
+ * - whitelist pro LIKE hledání: [ 'country_iso2', 'category' ]
  */
 final class Criteria {
     /** @var array<string,mixed> */
@@ -61,7 +61,7 @@ final class Criteria {
 
         // fulltext/LIKE (přes whitelist)
         if ($this->search !== null) {
-            $searchCols = [ 'country_iso2' ];
+            $searchCols = [ 'country_iso2', 'category' ];
             $likeParts = [];
             foreach ($searchCols as $i=>$c) {
                 if ($c === '') continue;
