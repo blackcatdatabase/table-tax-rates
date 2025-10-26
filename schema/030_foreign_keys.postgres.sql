@@ -1,4 +1,6 @@
--- Auto-generated from schema-map-postgres.psd1 (map@mtime:2025-10-24T09:46:38Z)
+-- Auto-generated from schema-map-postgres.psd1 (map@38d5403)
 -- engine: postgres
 -- table:  tax_rates
 ALTER TABLE tax_rates ADD CONSTRAINT fk_tax_rates_country FOREIGN KEY (country_iso2) REFERENCES countries(iso2) ON DELETE CASCADE;
+
+ALTER TABLE tax_rates ADD CONSTRAINT chk_tax_rates_rate CHECK (rate BETWEEN 0 AND 100);
