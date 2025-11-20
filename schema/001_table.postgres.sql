@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS tax_rates (
   rate NUMERIC(5,2) NOT NULL,
   valid_from DATE NOT NULL,
   valid_to DATE NULL,
-  CONSTRAINT chk_tax_category CHECK (category IN ('ebook','physical'))
+  CONSTRAINT chk_tax_category CHECK (category IN ('ebook','physical')),
+  CONSTRAINT chk_tax_valid_span CHECK (valid_to IS NULL OR valid_to >= valid_from)
 );
