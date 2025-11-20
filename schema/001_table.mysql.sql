@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-map-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  tax_rates
 CREATE TABLE IF NOT EXISTS tax_rates (
@@ -8,4 +8,4 @@ CREATE TABLE IF NOT EXISTS tax_rates (
   rate DECIMAL(5,2) NOT NULL,
   valid_from DATE NOT NULL,
   valid_to DATE NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;

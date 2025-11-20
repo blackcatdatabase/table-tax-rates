@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.psd1 (map@9d3471b)
+-- Auto-generated from schema-map-postgres.psd1 (map@62c9c93)
 -- engine: postgres
 -- table:  tax_rates
 CREATE TABLE IF NOT EXISTS tax_rates (
@@ -8,5 +8,6 @@ CREATE TABLE IF NOT EXISTS tax_rates (
   rate NUMERIC(5,2) NOT NULL,
   valid_from DATE NOT NULL,
   valid_to DATE NULL,
-  CONSTRAINT chk_tax_category CHECK (category IN ('ebook','physical'))
+  CONSTRAINT chk_tax_category CHECK (category IN ('ebook','physical')),
+  CONSTRAINT chk_tax_valid_span CHECK (valid_to IS NULL OR valid_to >= valid_from)
 );
