@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class TaxRateDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'country_iso2' => 'countryIso2', 'valid_from' => 'validFrom', 'valid_to' => 'validTo' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'country_iso2' => 'countryIso2', 'category' => 'category', 'rate' => 'rate', 'valid_from' => 'validFrom', 'valid_to' => 'validTo' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];
