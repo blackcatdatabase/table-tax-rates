@@ -15,7 +15,9 @@ final class TaxRateDto implements \JsonSerializable {
         public readonly string $category,
         public readonly string $rate,
         public readonly \DateTimeImmutable $validFrom,
-        public readonly ?\DateTimeImmutable $validTo
+        public readonly ?\DateTimeImmutable $validTo,
+        public readonly \DateTimeImmutable $createdAt,
+        public readonly \DateTimeImmutable $updatedAt
     ) {}
 
     /** Suitable for serialization/logging (without large blobs). */
