@@ -5,12 +5,12 @@ Tax rates per country and goods category. UNIQUE (country_iso2, category, valid_
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| category | mysql: ENUM('ebook','physical') / postgres: TEXT | NO |  | Tax category. (enum: ebook, physical) |
-| country_iso2 | CHAR(2) | NO |  | ISO 3166-1 alpha-2 country code. |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| rate | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Tax rate %. |
 | valid_from | DATE | NO |  | Effective from (date). |
 | valid_to | DATE | YES |  | Effective to (date), optional. |
+| id | BIGINT | NO |  | Surrogate primary key. |
+| category | mysql: ENUM('ebook','physical') / postgres: TEXT | NO |  | Tax category. (enum: ebook, physical) |
+| country_iso2 | CHAR(2) | NO |  | ISO 3166-1 alpha-2 country code. |
+| rate | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Tax rate %. |
 
 ## Engine Details
 
