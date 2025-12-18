@@ -3,14 +3,16 @@
 Tax rates per country and goods category. UNIQUE (country_iso2, category, valid_from).
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| country_iso2 | CHAR(2) | NO |  | ISO 3166-1 alpha-2 country code. |
-| category | mysql: ENUM('ebook','physical') / postgres: TEXT | NO |  | Tax category. (enum: ebook, physical) |
-| rate | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Tax rate %. |
-| valid_from | DATE | NO |  | Effective from (date). |
-| valid_to | DATE | YES |  | Effective to (date), optional. |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| country_iso2 | CHAR(2) | NO |  | ISO 3166-1 alpha-2 country code. |  |
+| category | mysql: ENUM('ebook','physical') / postgres: TEXT | NO |  | Tax category. (enum: ebook, physical) |  |
+| rate | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Tax rate %. |  |
+| valid_from | DATE | NO |  | Effective from (date). |  |
+| valid_to | DATE | YES |  | Effective to (date), optional. |  |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |  |
+| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Update timestamp (UTC). |  |
 
 ## Engine Details
 
