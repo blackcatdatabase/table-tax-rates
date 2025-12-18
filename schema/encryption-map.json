@@ -1,0 +1,32 @@
+{
+  "tables": {
+    "tax_rates": {
+      "columns": {
+        "category": {
+          "strategy": "passthrough"
+        },
+        "country_iso2": {
+          "strategy": "passthrough"
+        },
+        "created_at": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "rate": {
+          "strategy": "passthrough"
+        },
+        "updated_at": {
+          "strategy": "passthrough"
+        },
+        "valid_from": {
+          "strategy": "passthrough"
+        },
+        "valid_to": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
