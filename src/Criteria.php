@@ -41,11 +41,11 @@ final class Criteria extends BaseCriteria
         return [ 'country_iso2' ];
     }
 
-/** Columns allowed in ORDER BY (falls back to filterable() when empty). */
-protected function sortable(): array
-{
-    return [ 'id', 'country_iso2', 'category', 'rate', 'valid_from', 'valid_to', 'created_at', 'updated_at' ];
-}
+    /** Columns allowed in ORDER BY (falls back to filterable() when empty). */
+    protected function sortable(): array
+    {
+        return [ 'id', 'country_iso2', 'category', 'rate', 'valid_from', 'valid_to', 'created_at', 'updated_at' ];
+    }
 
     /**
      * Whitelist of joinable entities (for safe ->join() usage):
